@@ -1,73 +1,71 @@
-.title{
-    margin: 40px auto;
-    width: 100%;
+.title {
+  margin: 40px auto;
+  width: 100%;
 }
 
-.title h2{
-    margin-left: 100px;
+.title h2 {
+  margin-left: 100px;
 }
 
-.body{
-    column-count: 3;
-    width: 80%;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;    
-    
-    margin: 40px auto;
-    height: auto;
+.body {
+  position: relative;
+  width: 80%;
+  margin: 5px auto;
+  -moz-column-width: 23vw;
+  -webkit-column-width: 23vw;
+  column-width: 23vw;
+  -moz-column-gap: 0;
+  -webkit-column-gap: 0;
+  column-gap: 0;
 }
 
-.body::before,
-.body::after {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
+.pictures {
+  width: 20vw;
+  min-height: 80px;
+  margin: 3px 5px;
+  background: #ccc;
+  display: inline-block;
+  padding: 0;
+  line-height: 0;
+  border: solid 10px #fff;
+}
+
+.pictures p {
+  position: absolute;
+}
+
+.pictures h3 {
+  position: absolute;
+}
+
+.pictures button {
+  position: absolute;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.pictures button {
+  position: absolute;
+  cursor: pointer;
+}
+
+.pictures:hover button {
+  visibility: visible;
+}
+
+.pictures img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.picture:nth-child(3n + 1) {
+  order: 1;
+}
+.picture:nth-child(3n + 2) {
   order: 2;
 }
-
-.pictures{
-    display: inline-block; 
-    width: 30%; 
-    break-inside: avoid;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.25rem;
-    padding: 20px;
-    object-fit: contain;
-    height: 100%;
+.picture:nth-child(3n) {
+  order: 3;
 }
-
-.pictures p{
-    position: absolute;
-
-}
-
-.pictures h3{
-    position: absolute;
-    
-}
-
-.pictures button{
-    position: absolute;
-    cursor: pointer;
-    visibility: hidden;
-}
-
-.pictures button:hover{
-    position: absolute;
-    cursor: pointer;
-    visibility: visible;
-}
-
-.pictures img{
-    width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-    display: block;
-}
-
-.picture:nth-child(3n+1) { order: 1; }
-.picture:nth-child(3n+2) { order: 2; }
-.picture:nth-child(3n) { order: 3; }
