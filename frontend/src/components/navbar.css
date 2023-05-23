@@ -36,16 +36,11 @@
     width: 300px;
     height: 55px;
     font-size: 16px;
-
-    padding-left: 56px; 
+    background-color: #BDBDBD;
     box-sizing: border-box;
-    background-image: url('../images/search.png');
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: 24px;
-    background-padding-left: 20px;
-
-    border: 1px solid #BDBDBD;
+    background:  transparent url('../images/search.svg') no-repeat 10px center;
+    padding: 9px 4px 9px 60px;
+    border: 1px solid #555;
     filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
     border-radius: 12px;
 }

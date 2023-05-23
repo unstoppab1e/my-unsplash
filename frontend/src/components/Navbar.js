@@ -9,9 +9,10 @@ export const Navbar = () => {
             <div className='logo'>
                 <img src={Logo} alt='logo'/>
             </div>
-            <div className='search'>
+            <form className='search'>
+                
                 <input type='text' placeholder='Search' />
-            </div>
+            </form>
         </div>
         <div className='right'>
             <button className='button'>
