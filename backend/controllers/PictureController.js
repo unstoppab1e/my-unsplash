@@ -3,8 +3,10 @@ import Picture from '../models/Picture.js'
 class PictureController{
     async create(req,res){
         try{
-            const { title, description, imageUrl, uploadedBy } = req.body
-            const picture = await Picture.create({title, description, imageUrl, uploadedBy})
+            const { title, description, imageUrl } = req.body
+            console.log({title, description, imageUrl});
+            const picture = await Picture.create({title, description, imageUrl})
+            
             console.log(req.query);
             res.json(picture);
         } catch(e){

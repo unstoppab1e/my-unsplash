@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import router from './routes/router.js';
+import cors from 'cors';
 
 const PORT = 5000;
 const DB_URL = 'mongodb+srv://abdirakhym:abdirakhym@cluster0.6zwh3fr.mongodb.net/?retryWrites=true&w=majority'
@@ -9,6 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use('/api', router);
+app.use(cors())
 
 async function startApp(){
     try{
