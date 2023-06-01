@@ -4,68 +4,104 @@
 }
 
 .title h2{
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 .body{
-    column-count: 3;
+    position: relative;
     width: 80%;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: flex-start;    
-    
-    margin: 40px auto;
+    margin: 5px auto;
+    -moz-column-width: 23vw;
+    -webkit-column-width: 23vw;
+    column-width: 23vw;
+    -moz-column-gap: 0;
+    -webkit-column-gap: 0;
+    column-gap: 0;
     height: auto;
 }
 
-.body::before,
-.body::after {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
-  order: 2;
-}
-
 .pictures{
-    display: inline-block; 
-    width: 30%; 
-    break-inside: avoid;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.25rem;
-    padding: 20px;
-    object-fit: contain;
+    width: 20vw;
     height: 100%;
+    margin: 3px 5px;
+    display: inline-block;
+    padding: 0;
+    line-height: 0;
+    border: solid 10px #fff;
+    
 }
 
 .pictures p{
     position: absolute;
-
+    visibility: hidden;
 }
 
 .pictures h3{
     position: absolute;
-    
+    visibility: hidden;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    z-index: 1;
+    color: #FFFFFF;
+    bottom: 0.5rem;
+    left: 1rem;
 }
 
 .pictures button{
     position: absolute;
-    cursor: pointer;
     visibility: hidden;
+    width: 80px;
+    height: 36px;
+    background: none;
+    right: 10px;
+    top: 10px;
+    border: 2px solid #EB5757;
+    border-radius: 38px;
+    display: inline-block;
+    z-index:10;
+    
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 12px;
+    text-transform: lowercase;
+
+    color: #EB5757;
 }
 
-.pictures button:hover{
-    position: absolute;
+.pictures:hover img{
+    -webkit-filter: brightness(40%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    width: 100%;
+    
+}
+
+.pictures:hover button{
+    visibility: visible;
     cursor: pointer;
+}
+
+.pictures:hover h3{
     visibility: visible;
 }
-
 .pictures img{
     width: 100%;
     height: auto;
     border-radius: 0.75rem;
     display: block;
+    -webkit-filter: brightness(100%);
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 .picture:nth-child(3n+1) { order: 1; }

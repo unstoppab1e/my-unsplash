@@ -13,11 +13,6 @@ const Picture = new mongoose.Schema({
         type: String,
         required: true,
       },
-    uploadedBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      required: true,
-    },
     createdAt: {
       type: Date,
       default: Date.now,
