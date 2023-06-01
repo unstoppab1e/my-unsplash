@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, {useState, useEffect} from 'react'
-=======
 import React, {useState} from 'react'
->>>>>>> back
 import axios from 'axios'
 import "./addpicture.css"
 
@@ -21,11 +17,7 @@ export const AddPicture = () => {
     
         // Send the picture data to the backend
         axios
-<<<<<<< HEAD
-          .post('http://localhost:5000/api/pictures/', newPicture)
-=======
           .post('http://localhost:5000/api/pictures', newPicture)
->>>>>>> back
           .then((response) => {
             console.log(response.data); // Optional: Handle success message
             // Additional logic after successful picture submission
