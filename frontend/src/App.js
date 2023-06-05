@@ -22,7 +22,7 @@ function App() {
       <Navbar onSearch={handleSearchQuery} onToggleForm={toggleFormVisibility} />
       <Body searchQuery={searchQuery} showForm={showForm} onToggleForm={toggleFormVisibility} />
       <Bottom />
-      {showForm && <AddPicture />}
+      {showForm && <AddPicture onClose={toggleFormVisibility}/>}
     </div>
   );
 }

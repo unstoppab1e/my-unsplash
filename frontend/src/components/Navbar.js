@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './navbar.css'
 import Logo from '../images/my_unsplash_logo.svg'
-import axios from 'axios'
 
 export const Navbar = ({ onSearch, onToggleForm }) => {
 

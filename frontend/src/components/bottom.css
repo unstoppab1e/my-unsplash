@@ -8,3 +8,7 @@ a{
     text-decoration: none; 
     color: inherit;
 }
+
+.github:hover{
+    color: grey;
+}

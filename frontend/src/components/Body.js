@@ -22,7 +22,7 @@ export const Body = ({searchQuery}) => {
     picture.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-
+  
   useEffect(() => {
       const fetchPictures = async () => {
         try {
@@ -33,7 +33,7 @@ export const Body = ({searchQuery}) => {
         }};
       
       fetchPictures();
-      },[]);
+      },[pictures]);
   return (
       <div className='title'>
           <h2>Picture List</h2>

@@ -9,8 +9,8 @@ const DB_URL = 'mongodb+srv://abdirakhym:abdirakhym@cluster0.6zwh3fr.mongodb.net
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use('/api', router);
-app.use(cors())
 
 async function startApp(){
     try{
